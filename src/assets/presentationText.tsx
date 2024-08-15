@@ -1,0 +1,3 @@
+const presentationText = "I am a back-end engineer dedicated to crafting the robust server-side logic that powers seamless and efficient applications. With a background in sales and marketing, I bring a unique blend of business acumen and technical expertise to the table.\n I am currently enrolled in a License degree at University of Haute Alsace with a major in Objet Oriented Programming.\nIf you have a compelling opportunity that resonates with my profile, feel free to reach out.Let's connect and explore the endless possibilities in the world of technology."
+
+export default presentationText;
