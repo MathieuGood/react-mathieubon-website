@@ -2,6 +2,7 @@ import React from "react"
 import BulletPoint from "./BulletPoint"
 import PrimaryColorButton from "./PrimaryColorButton"
 import ProjectTechIcon from "./TechIcon"
+import ProjectVideo from "./ProjectVideo"
 import githubLogo from "/src/assets/images/github.svg"
 
 const projectsData = [
@@ -63,7 +64,11 @@ const ProjectsSection: React.FC = () => {
 								<p className="mb-8 font-light lg:text-xl">{project.description}</p>
 								<div className="tech-stack flex">
 									{project.techStack.map((tech, techIndex) => (
-										<ProjectTechIcon key={techIndex} src={tech.src} alt={tech.alt} />
+										<ProjectTechIcon
+											key={techIndex}
+											src={tech.src}
+											alt={tech.alt}
+										/>
 									))}
 								</div>
 								<ul
@@ -87,17 +92,7 @@ const ProjectsSection: React.FC = () => {
 									Open on GitHub
 								</PrimaryColorButton>
 							</div>
-							<div className="flex justify-center items-center">
-								<video
-									autoPlay
-									loop
-									muted
-									playsInline
-									className="h-100 mb-4 rounded-lg lg:mb-0 lg:flex">
-									<source src={project.videoSrc} type="video/mp4" />
-									Your browser does not support the video tag.
-								</video>
-							</div>
+							<ProjectVideo videoSrc={project.videoSrc} />
 						</>
 					</div>
 				))}
