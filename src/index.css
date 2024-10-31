@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "Departure Mono";
+		src: url("src/assets/fonts/DepartureMono-Regular.woff2") format("woff2"),
+			url("src/assets/fonts/DepartureMono-Regular.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+.terminal {
+	max-width: 650px;
+	min-width: 450px;
+	background-color: #2d2d2d;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	color: #c5c8c6;
+	font-family: "Departure Mono", monospace;
+}
+.terminal-header {
+	background-color: #e0e0e0;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.terminal-header div {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+.close {
+	background-color: #ff5f56;
+}
+.minimize {
+	background-color: #ffbd2e;
+}
+.maximize {
+	background-color: #27c93f;
+}
+.terminal-body {
+	padding: 20px;
+	font-size: 16px;
+	line-height: 1.5;
+	min-height: 220px;
+}
+.command {
+	color: #8abeb7;
+}
+.output {
+	color: #b5bd68;
+}
+.cursor {
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	background-color: #c5c8c6;
+	animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+	from,
+	to {
+		background-color: transparent;
+	}
+	50% {
+		background-color: #c5c8c6;
+	}
+}
+img:hover {
+	filter: invert(29%) sepia(100%) saturate(747%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
