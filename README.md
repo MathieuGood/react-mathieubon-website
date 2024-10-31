@@ -4,4 +4,4 @@
 
  ## Description 
 
-This is my personal website, it is a React application that uses TypeScript. It is a simple website that showcases my projects and my resume.
+Personal website to showcase my portfolio. Built with React and TypeScript.
