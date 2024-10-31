@@ -1,5 +1,8 @@
 import React from "react"
 import BulletPoint from "./BulletPoint"
+import PrimaryColorButton from "./PrimaryColorButton"
+import ProjectTechIcon from "./TechIcon"
+import githubLogo from "/src/assets/images/github.svg"
 
 const projectsData = [
 	{
@@ -47,119 +50,55 @@ const ProjectsSection: React.FC = () => {
 		<section className="bg-gray-100">
 			<div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 md:py-20 lg:space-y-20 lg:py-24 lg:px-16">
 				<h2 className="text-4xl font-bold text-primary-1">Projects</h2>
+
 				{projectsData.map((project, index) => (
 					<div
 						key={index}
 						className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-						{index % 2 === 0 ? (
-							<>
-								<div className="text-gray-500 sm:text-lg">
-									<h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
-										{project.title}
-									</h2>
-									<p className="mb-8 font-light lg:text-xl">
-										{project.description}
-									</p>
-									<div className="tech-stack flex">
-										{project.techStack.map((tech, techIndex) => (
-											<img
-												key={techIndex}
-												src={tech.src}
-												className="w-8 h-8 mx-2"
-												alt={tech.alt}
-											/>
-										))}
-									</div>
-									<ul
-										role="list"
-										className="pt-8 space-y-5 border-t border-gray-200 my-7">
-										{project.features.map((feature, featureIndex) => (
-											<li key={featureIndex} className="flex space-x-3">
-												<BulletPoint className="w-5 h-5 text-primary-1" />
-												<span className="text-base font-medium leading-tight text-gray-900">
-													{feature}
-												</span>
-											</li>
-										))}
-									</ul>
-									<a
-										href={project.githubLink}
-										className="inline-flex items-center justify-center w-full px-5 py-2 mr-2 text-m font-medium text-center text-gray-900 border bg-primary-2 border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
-										<img
-											src="src/assets/images/github.svg"
-											className="w-4 h-4 mr-2 text-gray-500"
-											alt="GitHub Logo"
-										/>
-										Open on GitHub
-									</a>
+						<>
+							<div className="text-gray-500 sm:text-lg">
+								<h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
+									{project.title}
+								</h2>
+								<p className="mb-8 font-light lg:text-xl">{project.description}</p>
+								<div className="tech-stack flex">
+									{project.techStack.map((tech, techIndex) => (
+										<ProjectTechIcon key={techIndex} src={tech.src} alt={tech.alt} />
+									))}
 								</div>
-								<div className="flex justify-center items-center">
-									<video
-										autoPlay
-										loop
-										muted
-										playsInline
-										className="h-100 mb-4 rounded-lg lg:mb-0 lg:flex">
-										<source src={project.videoSrc} type="video/mp4" />
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							</>
-						) : (
-							<>
-								<div className="flex justify-center items-center">
-									<video
-										autoPlay
-										loop
-										muted
-										playsInline
-										className="h-100 mb-4 rounded-lg lg:mb-0 lg:flex">
-										<source src={project.videoSrc} type="video/mp4" />
-										Your browser does not support the video tag.
-									</video>
-								</div>
-								<div className="text-gray-500 sm:text-lg">
-									<h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
-										{project.title}
-									</h2>
-									<p className="mb-8 font-light lg:text-xl">
-										{project.description}
-									</p>
-									<div className="tech-stack flex">
-										{project.techStack.map((tech, techIndex) => (
-											<img
-												key={techIndex}
-												src={tech.src}
-												className="w-8 h-8 mx-2"
-												alt={tech.alt}
-											/>
-										))}
-									</div>
-									<ul
-										role="list"
-										className="pt-8 space-y-5 border-t border-gray-200 my-7">
-										{project.features.map((feature, featureIndex) => (
-											<li key={featureIndex} className="flex space-x-3">
-												<BulletPoint className="w-5 h-5 text-primary-1" />
-												<span className="text-base font-medium leading-tight text-gray-900">
-													{feature}
-												</span>
-											</li>
-										))}
-									</ul>
-									<a
-										href={project.githubLink}
-										className="inline-flex items-center justify-center w-full px-5 py-2 mr-2 text-m font-medium text-center text-gray-900 border bg-primary-2 border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
-										<img
-											src="src/assets/images/github.svg"
-											className="w-4 h-4 mr-2 text-gray-500"
-											alt="GitHub Logo"
-										/>
-										Open on GitHub
-									</a>
-								</div>
-							</>
-						)}
+								<ul
+									role="list"
+									className="pt-8 space-y-5 border-t border-gray-200 my-7">
+									{project.features.map((feature, featureIndex) => (
+										<li key={featureIndex} className="flex space-x-3">
+											<BulletPoint className="w-5 h-5 text-primary-1" />
+											<span className="text-base font-medium leading-tight text-gray-900">
+												{feature}
+											</span>
+										</li>
+									))}
+								</ul>
+								<PrimaryColorButton href={project.githubLink}>
+									<img
+										src={githubLogo}
+										className="w-4 h-4 mr-2 text-gray-500"
+										alt="GitHub Logo"
+									/>
+									Open on GitHub
+								</PrimaryColorButton>
+							</div>
+							<div className="flex justify-center items-center">
+								<video
+									autoPlay
+									loop
+									muted
+									playsInline
+									className="h-100 mb-4 rounded-lg lg:mb-0 lg:flex">
+									<source src={project.videoSrc} type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</>
 					</div>
 				))}
 			</div>
