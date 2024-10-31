@@ -1,5 +1,3 @@
-import React, { useState } from "react"
-
 const Navbar: React.FC = () => {
 	return <div></div>
 }
