@@ -1,4 +1,5 @@
 import React from "react"
+import Terminal from "./Terminal"
 
 const Hero: React.FC = () => {
 	return (
@@ -19,22 +20,13 @@ const Hero: React.FC = () => {
 						Mathieu Bon.
 					</h1>
 					<p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
-						Back-end developer, passionate about the Python ecosystem.
+						Back-end developer. Passionate about the Python ecosystem.
 					</p>
-					<div className="terminal mb-6">
-						<div className="terminal-header">
-							<div className="close"></div>
-							<div className="minimize"></div>
-							<div className="maximize"></div>
-						</div>
-						<div className="terminal-body">
-							<div className="content"></div>
-						</div>
-					</div>
+					<Terminal />
 					<div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
 						<a
 							href="https://github.com/MathieuGood"
-							className="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-medium text-center text-gray-900 border bg-white border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+							className="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-medium text-center text-gray-900 border bg-white border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-200">
 							<img
 								src="src/assets/images/github.svg"
 								className="w-7 h-7 mr-2 text-gray-500"

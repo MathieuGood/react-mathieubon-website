@@ -32,7 +32,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectData }) => {
 					))}
 				</div>
 
-				<ul role="list" className="pt-8 space-y-5 border-t border-gray-200 my-7">
+				<ul role="list" className="pt-4 space-y-5 -t border-gray-200 my-7">
 					{projectData.features.map((feature, featureIndex: number) => (
 						<li key={featureIndex} className="flex space-x-3">
 							<BulletPoint className="w-5 h-5 text-primary-1" />

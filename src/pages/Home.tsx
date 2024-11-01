@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import SkillsSection from "../components/SkillsSection"
@@ -6,6 +6,9 @@ import ProjectsSection from "../components/ProjectsSection"
 import Footer from "../components/Footer"
 
 const Home: React.FC = () => {
+	const heroRef = useRef<HTMLDivElement | null>(null)
+	const [isHeroOutOfView, setIsHeroOutOfView] = useState(false)
+
 	useEffect(() => {
 		const contentElement = document.querySelector(".content")
 
@@ -27,11 +30,15 @@ const Home: React.FC = () => {
 				const line = terminalContent[contentIndex]
 				if (lineIndex < line.length) {
 					const char = line[lineIndex]
-					contentElement.innerHTML += char === " " ? "&nbsp;" : char
+					if (contentElement) {
+						contentElement.innerHTML += char === " " ? "&nbsp;" : char
+					}
 					lineIndex++
 					setTimeout(typeContent, 70)
 				} else {
-					contentElement.innerHTML += "<br />"
+					if (contentElement) {
+						contentElement.innerHTML += "<br />"
+					}
 					lineIndex = 0
 					contentIndex++
 					setTimeout(typeContent, 500)
@@ -41,15 +48,33 @@ const Home: React.FC = () => {
 
 		typeContent()
 
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setIsHeroOutOfView(!entry.isIntersecting)
+			},
+			{ threshold: 0.1 }
+		)
+
+		if (heroRef.current) {
+			observer.observe(heroRef.current)
+		}
+
 		return () => {
-			contentElement.innerHTML = ""
+			if (contentElement) {
+				contentElement.innerHTML = ""
+			}
+			if (heroRef.current) {
+				observer.unobserve(heroRef.current)
+			}
 		}
 	}, [])
 
 	return (
 		<div>
-			<Header />
-			<Hero />
+			{isHeroOutOfView && <Header />}
+			<div ref={heroRef}>
+				<Hero />
+			</div>
 			<SkillsSection />
 			<ProjectsSection />
 			<Footer />
