@@ -9,7 +9,7 @@ const Terminal: React.FC = () => {
 				<div className="maximize"></div>
 			</div>
 			<div className="terminal-body">
-				<div className="content"></div>
+				<div className="content text-xs lg:text-sm"></div>
 			</div>
 		</div>
 	)
