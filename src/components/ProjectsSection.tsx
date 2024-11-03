@@ -5,8 +5,6 @@ import projectsData from "../data/projectsData.json"
 import ProjectSeparator from "./ProjectSeparator"
 
 const ProjectsSection: React.FC = () => {
-
-	
 	return (
 		<section className="bg-gray-200">
 			<div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 md:pt-20 md:pb-10 lg:space-y-20 lg:pt-24 lg:pb-8 lg:px-16">

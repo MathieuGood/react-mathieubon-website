@@ -19,12 +19,11 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
 			<div className="relative bg-white w-10/12 md:w-3/4 lg:w-3/4 max-w-[700px] max-h-screen p-6 rounded-lg shadow-lg overflow-y-auto">
 				<h2 className="text-xl font-bold mb-4">Legal Notice</h2>
 
-				{legalNoticeData.map((item, index) => {
-					const [title, content] = Object.entries(item)[0]
+				{legalNoticeData.map((paragraph, index) => {
 					return (
 						<div key={index} className="mt-4">
-							<h3 className="text-base font-semibold">{title}</h3>
-							<p className="text-xs text-gray-600">{content}</p>
+							<h3 className="text-base font-semibold">{paragraph.title}</h3>
+							<p className="text-xs text-gray-600">{paragraph.content}</p>
 						</div>
 					)
 				})}
