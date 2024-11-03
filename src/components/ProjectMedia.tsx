@@ -6,7 +6,7 @@ interface ProjectMediaProps {
 
 const ProjectMedia: React.FC<ProjectMediaProps> = ({ mediaSrc: path }) => {
 	return (
-		<div className="flex justify-center items-center mt-8 lg:mt-0">
+		<div className="flex justify-center items-center mt-8 lg:mt-0 lg:order-2">
 			{path.endsWith("mp4") ? (
 				<video
 					autoPlay
