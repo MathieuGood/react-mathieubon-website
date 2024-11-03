@@ -25,8 +25,9 @@ const Hero: React.FC = () => {
 						</div>
 						<div className="presentation-text">
 							<h1 className="font-sans max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
-								Hello, <br />
-								my name is
+								Hello,<br /> my name is
+								
+								
 								<br />
 								Mathieu Bon.
 							</h1>
