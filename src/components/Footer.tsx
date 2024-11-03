@@ -1,32 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import LegalModal from './LegalModal'; // Import the LegalModal component
+import React, { useState, useEffect } from "react"
+import LegalModal from "./LegalModal" // Import the LegalModal component
 
 const Footer: React.FC = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	// Function to open the modal
 	const openModal = () => {
-		setIsModalOpen(true);
-	};
+		setIsModalOpen(true)
+	}
 
 	// Function to close the modal
 	const closeModal = () => {
-		setIsModalOpen(false);
-	};
+		setIsModalOpen(false)
+	}
 
-	// Effect to disable scrolling when the modal is open
 	useEffect(() => {
 		if (isModalOpen) {
-			document.body.style.overflow = 'hidden'; // Disable scrolling
+			document.body.style.overflow = "hidden"
 		} else {
-			document.body.style.overflow = 'auto'; // Enable scrolling
+			document.body.style.overflow = "auto"
 		}
 
-		// Cleanup function to reset overflow when the component unmounts
 		return () => {
-			document.body.style.overflow = 'auto';
-		};
-	}, [isModalOpen]);
+			document.body.style.overflow = "auto"
+		}
+	}, [isModalOpen])
 
 	return (
 		<footer className="footer">
@@ -45,7 +43,7 @@ const Footer: React.FC = () => {
 			</div>
 			{isModalOpen && <LegalModal onClose={closeModal} />}
 		</footer>
-	);
-};
+	)
+}
 
-export default Footer;
+export default Footer
