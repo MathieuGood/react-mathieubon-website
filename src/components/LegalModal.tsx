@@ -31,7 +31,7 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
 				<div className="flex justify-center mt-6 sticky bottom-0 bg-white py-4">
 					<button
 						onClick={onClose}
-						className="inline-flex items-center justify-center  px-8 py-2 mt-4 text-m font-medium text-center text-gray-900 border bg-primary-2 border-gray-200 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 transition duration-300">
+						className="inline-flex items-center justify-center px-8 py-2 mt-4 text-m font-medium text-center text-gray-900 border bg-primary-2 border-gray-200 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 transition duration-300">
 						Close
 					</button>
 				</div>

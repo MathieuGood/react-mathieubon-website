@@ -10,7 +10,7 @@ const Home: React.FC = () => {
 	const { isHeroOutOfView, heroRef } = useHeroVisibility()
 
 	return (
-		<div>
+		<div className="overflow-x-hidden">
 			{isHeroOutOfView && <Header />}
 			<div ref={heroRef}>
 				<Hero />
