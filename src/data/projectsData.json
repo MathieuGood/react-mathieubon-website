@@ -33,7 +33,7 @@
 			"Containerized app for easy deployment"
 		],
 		"githubLink": "https://github.com/MathieuGood/temperature_logger",
-		"mediaSrc": "src/assets/videos/temperature_logger_gif.gif"
+		"mediaSrc": "src/assets/videos/temperature_logger_demo.mp4"
 	},
 	{
 		"title": "Concerts I've Been To",
@@ -44,12 +44,8 @@
 			{ "src": "src/assets/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
 			{ "src": "src/assets/images/tech-postgres.svg", "alt": "PostgreSQL" }
 		],
-		"features": [
-			"CRUD operations",
-			"User authentication",
-			"Data validation"
-		],
+		"features": ["CRUD operations", "User authentication", "Data validation"],
 		"githubLink": "https://github.com/MathieuGood/concerts_db",
-		"mediaSrc": "src/assets/videos/temperature_logger_gif.gif"
+		"mediaSrc": "src/assets/videos/temperature_logger_demo.mp4"
 	}
 ]
