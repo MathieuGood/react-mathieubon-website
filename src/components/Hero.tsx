@@ -1,7 +1,6 @@
 import React from "react"
 import Terminal from "./Terminal"
-import LinkedInHeroButton from "./LinkedInHeroButton"
-import GitHubHeroButton from "./GitHubHeroButton"
+import SocialMediaButton from "./SocialMediaButton"
 import heroData from "../data/heroData.json"
 
 const Hero: React.FC = () => {
@@ -34,11 +33,26 @@ const Hero: React.FC = () => {
 							</p>
 						</div>
 					</div>
+
 					<Terminal />
-					{/* <div className="hero-buttons space-y-4 sm:flex sm:space-y-0 sm:space-x-4"> */}
+
 					<div className="hero-buttons  flex space-y-0 space-x-4">
-						<GitHubHeroButton href={heroData[0].githubLink} />
-						<LinkedInHeroButton href={heroData[0].linkedinLink} />
+						<SocialMediaButton
+							href={heroData[0].githubLink}
+							className="py-3 text-xl"
+							imageSize="7"
+							imageSrc="src/assets/images/github.svg"
+							imageAlt="GitHub logo"
+							text="GitHub"
+						/>
+						<SocialMediaButton
+							href={heroData[0].linkedinLink}
+							className="py-3 text-xl"
+							imageSize="6"
+							imageSrc="src/assets/images/linkedin.svg"
+							imageAlt="LinkedIn logo"
+							text="LinkedIn"
+						/>
 					</div>
 				</div>
 			</div>
