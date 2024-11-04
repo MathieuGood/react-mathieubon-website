@@ -34,5 +34,22 @@
 		],
 		"githubLink": "https://github.com/MathieuGood/temperature_logger",
 		"mediaSrc": "src/assets/videos/temperature_logger_gif.gif"
+	},
+	{
+		"title": "Concerts I've Been To",
+		"description": "A simple app to keep track of all the concerts you've been to. Made for my own personal use as a side project.",
+		"techStack": [
+			{ "src": "src/assets/images/tech-python.svg", "alt": "Python" },
+			{ "src": "src/assets/images/tech-fastapi.svg", "alt": "FastAPI" },
+			{ "src": "src/assets/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
+			{ "src": "src/assets/images/tech-postgres.svg", "alt": "PostgreSQL" }
+		],
+		"features": [
+			"CRUD operations",
+			"User authentication",
+			"Data validation"
+		],
+		"githubLink": "https://github.com/MathieuGood/concerts_db",
+		"mediaSrc": "src/assets/videos/temperature_logger_gif.gif"
 	}
 ]
