@@ -1,7 +1,7 @@
 import React from "react"
 import Terminal from "./Terminal"
 import SocialMediaButton from "./SocialMediaButton"
-import heroData from "../data/heroData.json"
+import pageData from "../data/pageData.json"
 
 const Hero: React.FC = () => {
 	return (
@@ -26,10 +26,10 @@ const Hero: React.FC = () => {
 						</div>
 						<div className="presentation-text">
 							<h1 className="hero-title max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
-								{heroData[0].title}
+								{pageData[0].heroTitle}
 							</h1>
 							<p className="hero-subtitle max-w-2xl mb-6 text-md font-light lg:mb-8 md:text-lg lg:text-xl">
-								{heroData[0].subtitle}
+								{pageData[0].heroSubtitle}
 							</p>
 						</div>
 					</div>
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
 
 					<div className="hero-buttons flex space-y-0 space-x-4">
 						<SocialMediaButton
-							href={heroData[0].githubLink}
+							href={pageData[0].githubLink}
 							divClassName="py-3 text-xl"
 							imageSize="6"
 							imageSrc="src/assets/images/github.svg"
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 							textClassName="ml-2"
 						/>
 						<SocialMediaButton
-							href={heroData[0].linkedinLink}
+							href={pageData[0].linkedinLink}
 							divClassName="py-3 text-xl"
 							imageSize="6"
 							imageSrc="src/assets/images/linkedin.svg"

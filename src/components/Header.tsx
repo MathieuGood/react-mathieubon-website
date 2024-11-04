@@ -1,6 +1,6 @@
 import React from "react"
 import SocialMediaButton from "./SocialMediaButton"
-import heroData from "../data/heroData.json"
+import pageData from "../data/pageData.json"
 
 const Header: React.FC = () => {
 	return (
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
 					<div className="flex items-center">
 						<SocialMediaButton
-							href={heroData[0].githubLink}
+							href={pageData[0].githubLink}
 							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
 							imageSrc="src/assets/images/github.svg"
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 							textClassName="hidden xm:block xm:ml-2"
 						/>
 						<SocialMediaButton
-							href={heroData[0].linkedinLink}
+							href={pageData[0].linkedinLink}
 							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
 							imageSrc="src/assets/images/linkedin.svg"
