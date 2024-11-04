@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 					<a href="#" className="flex items-center">
 						<img
 							src="src/assets/images/avatar.png"
-							className="h-6 mr-3 sm:h-9"
+							className="h-10 mr-3"
 							alt="Mathieu Bon avatar"
 						/>
 						<span className="self-center text-xl font-semibold whitespace-nowrap">
@@ -18,22 +18,24 @@ const Header: React.FC = () => {
 						</span>
 					</a>
 
-					<div className="flex items-center lg:order-2">
+					<div className="flex items-center">
 						<SocialMediaButton
 							href={heroData[0].githubLink}
-							className="py-2 mr-2 text-sm"
+							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
 							imageSrc="src/assets/images/github.svg"
 							imageAlt="GitHub logo"
 							text="GitHub"
+							textClassName="hidden xm:block xm:ml-2"
 						/>
 						<SocialMediaButton
-							href={heroData[0].githubLink}
-							className="py-2 mr-2 text-sm"
+							href={heroData[0].linkedinLink}
+							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
 							imageSrc="src/assets/images/linkedin.svg"
 							imageAlt="LinkedIn logo"
 							text="LinkedIn"
+							textClassName="hidden xm:block xm:ml-2"
 						/>
 					</div>
 				</div>

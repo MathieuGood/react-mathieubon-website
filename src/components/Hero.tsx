@@ -36,22 +36,24 @@ const Hero: React.FC = () => {
 
 					<Terminal />
 
-					<div className="hero-buttons  flex space-y-0 space-x-4">
+					<div className="hero-buttons flex space-y-0 space-x-4">
 						<SocialMediaButton
 							href={heroData[0].githubLink}
-							className="py-3 text-xl"
-							imageSize="7"
+							divClassName="py-3 text-xl"
+							imageSize="6"
 							imageSrc="src/assets/images/github.svg"
 							imageAlt="GitHub logo"
 							text="GitHub"
+							textClassName="ml-2"
 						/>
 						<SocialMediaButton
 							href={heroData[0].linkedinLink}
-							className="py-3 text-xl"
+							divClassName="py-3 text-xl"
 							imageSize="6"
 							imageSrc="src/assets/images/linkedin.svg"
 							imageAlt="LinkedIn logo"
 							text="LinkedIn"
+							textClassName="ml-2"
 						/>
 					</div>
 				</div>
