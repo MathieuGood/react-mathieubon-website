@@ -4,7 +4,7 @@
 		"projects": [
 			{
 				"title": "Jewels Juggle",
-				"description": "Réinterprétation personnelle du jeu Bejeweled. Réalisé avec React Native pour compilation en application native iOS ou Android.",
+				"description": "Réinterprétation personnelle du jeu Bejeweled avec un thème visuel égyptien. Réalisé avec React Native pour compilation en application native iOS ou Android.",
 				"techStack": [
 					{ "src": "src/assets/images/tech-react.svg", "alt": "React Native" },
 					{ "src": "src/assets/images/tech-node.svg", "alt": "NodeJS" },
@@ -14,7 +14,7 @@
 					{ "src": "src/assets/images/tech-android.svg", "alt": "Android" }
 				],
 				"features": [
-					"Athentification utilisateur",
+					"Authentification utilisateur",
 					"Logique de jeu et animations",
 					"Notifications par e-mail des joueurs au changements de score et classement"
 				],
