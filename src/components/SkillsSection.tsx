@@ -9,7 +9,7 @@ const SkillsSection: React.FC = () => {
 		<section className="bg-white">
 			<div className="items-center max-w-screen-xl px-4 py-8 mx-auto md:py-20 lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-16">
 				<div className="col-span-2 mb-8">
-					<h2 className="text-3xl lg:text-3xl font-bold text-primary-1">
+					<h2 className="text-3xl lg:text-4xl font-bold text-primary-1">
 						{skillsData[0].title}
 					</h2>
 					<p className="mt-3 mb-4 text-xl font-extrabold tracking-tight text-gray-900 md:text-2xl">
