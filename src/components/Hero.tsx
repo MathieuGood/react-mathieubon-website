@@ -1,5 +1,8 @@
 import React from "react"
 import Terminal from "./Terminal"
+import LinkedInHeroButton from "./LinkedInHeroButton"
+import GitHubHeroButton from "./GitHubHeroButton"
+import heroData from "../data/heroData.json"
 
 const Hero: React.FC = () => {
 	return (
@@ -25,38 +28,17 @@ const Hero: React.FC = () => {
 						</div>
 						<div className="presentation-text">
 							<h1 className="font-sans max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
-								Hello,
-								<br /> my name is
-								<br />
-								Mathieu Bon.
+								{heroData[0].title}
 							</h1>
 							<p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
-								Back-end developer. Passionate about the Python ecosystem.
+								{heroData[0].subtitle}
 							</p>
 						</div>
 					</div>
 					<Terminal />
 					<div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-						<a
-							href="https://github.com/MathieuGood"
-							className="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-medium text-center text-gray-900 border bg-white border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-200">
-							<img
-								src="src/assets/images/github.svg"
-								className="w-7 h-7 mr-2 text-gray-500"
-								alt="GitHub Logo"
-							/>
-							GitHub
-						</a>
-						<a
-							href="https://www.linkedin.com/in/mathieubon/"
-							className="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-xl font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
-							<img
-								src="src/assets/images/linkedin.svg"
-								className="w-6 h-6 mr-2"
-								alt="LinkedIn Logo"
-							/>
-							LinkedIn
-						</a>
+						<GitHubHeroButton href={heroData[0].githubLink} />
+						<LinkedInHeroButton href={heroData[0].linkedinLink} />
 					</div>
 				</div>
 			</div>
