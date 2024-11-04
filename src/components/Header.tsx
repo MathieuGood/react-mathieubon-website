@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 		<header className="fixed w-full">
 			<nav className="bg-primary-2 border-gray-200 py-2.5">
 				<div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-					<a href="#" className="flex items-center">
+					<div className="flex items-center">
 						<img
 							src="src/assets/images/avatar.png"
 							className="h-10 mr-3"
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 						<span className="self-center text-xl font-semibold whitespace-nowrap">
 							Mathieu Bon
 						</span>
-					</a>
+					</div>
 
 					<div className="flex items-center">
 						<SocialMediaButton
