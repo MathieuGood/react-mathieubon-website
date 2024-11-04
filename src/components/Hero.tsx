@@ -27,10 +27,10 @@ const Hero: React.FC = () => {
 							/>
 						</div>
 						<div className="presentation-text">
-							<h1 className="font-sans max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
+							<h1 className="max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
 								{heroData[0].title}
 							</h1>
-							<p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
+							<p className="max-w-2xl mb-6 text-md font-light lg:mb-8 md:text-lg lg:text-xl">
 								{heroData[0].subtitle}
 							</p>
 						</div>
