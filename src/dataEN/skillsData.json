@@ -1,8 +1,8 @@
 [
 	{
-		"title": "Compétences et Pile Technologique",
-		"subtitle": "J'apporte un savant mélange d'acuité commerciale et d'expertise technique.",
-		"description": "Doublement diplômé en Management et Informatique, je suis un développeur back-end ayant à coeur de concevoir les meilleures solutions pour les utilisateurs finaux.",
+		"title": "Skills and Tech Stack",
+		"subtitle": "I bring a blend of business acumen and technical expertise to the table.",
+		"description": "With a double degree in Business and Computer Science, I am a back-end developer with a strong focus on conceiving the best solutions for end-users.",
 		"techStack": [
 			{
 				"src": "src/assets/images/tech-python.svg",

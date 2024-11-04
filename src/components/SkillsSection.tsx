@@ -2,6 +2,7 @@ import React from "react"
 import PrimaryColorButton from "./PrimaryColorButton"
 import TechSkill from "./TechSkill"
 import skillsData from "../data/skillsData.json"
+import buttonTextData from "../data/buttonsTextData.json"
 
 const SkillsSection: React.FC = () => {
 	return (
@@ -9,19 +10,17 @@ const SkillsSection: React.FC = () => {
 			<div className="items-center max-w-screen-xl px-4 py-8 mx-auto md:py-20 lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-16">
 				<div className="col-span-2 mb-8">
 					<h2 className="text-3xl lg:text-3xl font-bold text-primary-1">
-						Skills and Tech Stack
+						{skillsData[0].title}
 					</h2>
 					<p className="mt-3 mb-4 text-xl font-extrabold tracking-tight text-gray-900 md:text-2xl">
-						I bring a blend of business acumen and technical expertise to the table.
+						{skillsData[0].subtitle}
 					</p>
 					<p className="font-light text-gray-500 sm:text-xl">
-						With a double degree in Business and Computer Science, I am a back-end
-						developer with a strong focus on conceiving the best solutions for
-						end-users.
+						{skillsData[0].description}
 					</p>
 					<div className="pt-6 mt-6 space-y-4 border-t border-gray-200">
 						<PrimaryColorButton href="https://www.linkedin.com/in/mathieubon/">
-							{skillsData[0].resumeButtonText}
+							{buttonTextData[0].resume}
 							<img src="/src/assets/images/arrow.svg" className="w-5 h-5 ml-1" />
 						</PrimaryColorButton>
 					</div>

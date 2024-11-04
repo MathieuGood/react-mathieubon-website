@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import LegalModal from "./LegalModal" // Import the LegalModal component
+import LegalModal from "./LegalModal" 
+import legalData from "../data/legalData.json"
 
 const Footer: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
 						<a
 							onClick={openModal}
 							className="ml-2 text-primary-1 hover:underline cursor-pointer">
-							Legal Notice
+							{legalData[0].title}
 						</a>
 						.
 					</span>

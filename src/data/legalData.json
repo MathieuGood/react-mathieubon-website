@@ -1,0 +1,15 @@
+[
+	{
+		"title": "Mentions légales",
+		"paragraphs": [
+			{
+				"title": "Contact",
+				"content": "Site personnel de Mathieu Bon. Pour toute question ou demande concernant le contenu de ce site, veuillez me contacter directement à l'adresse contact@mathieubon.com"
+			},
+			{
+				"title": "Hébergement",
+				"content": "Hébergé par OVH SAS, 2 rue Kellermann, 59100 Roubaix - France"
+			}
+		]
+	}
+]

@@ -1,8 +1,13 @@
 import React from "react"
-import legalNoticeData from "../data/legalNoticeData.json"
+import legalData from "../data/legalData.json"
 
 interface LegalModalProps {
 	onClose: () => void
+}
+
+interface Paragraph {
+	title: string
+	content: string
 }
 
 const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
@@ -17,9 +22,9 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
 			className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
 			onClick={handleBackgroundClick}>
 			<div className="relative bg-white w-10/12 md:w-3/4 lg:w-3/4 max-w-[700px] max-h-screen p-6 rounded-lg shadow-lg overflow-y-auto">
-				<h2 className="text-xl font-bold mb-4">Legal Notice</h2>
+				<h2 className="text-xl font-bold mb-4">{legalData[0].title}</h2>
 
-				{legalNoticeData.map((paragraph, index) => {
+				{legalData[0].paragraphs.map((paragraph: Paragraph, index: number) => {
 					return (
 						<div key={index} className="mt-4">
 							<h3 className="text-base font-semibold">{paragraph.title}</h3>

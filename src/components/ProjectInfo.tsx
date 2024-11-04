@@ -3,6 +3,7 @@ import BulletPoint from "./BulletPoint"
 import PrimaryColorButton from "./PrimaryColorButton"
 import ProjectTechIcon from "./TechIcon"
 import githubLogo from "/src/assets/images/github.svg"
+import buttonsTextData from "../data/buttonsTextData.json"
 
 interface Project {
 	title: string
@@ -49,7 +50,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectData }) => {
 						className="w-4 h-4 mr-2 text-gray-500"
 						alt="GitHub Logo"
 					/>
-					Open on GitHub
+					{buttonsTextData[0].openGithubProject}
 				</PrimaryColorButton>
 			</div>
 		</div>
