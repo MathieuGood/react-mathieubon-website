@@ -21,7 +21,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectData }) => {
 	return (
 		<div>
 			<div className="text-gray-500 sm:text-lg">
-				<h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
+				<h2 className="mb-4 text-2xl font-extrabold tracking-tight text-gray-900">
 					{projectData.title}
 				</h2>
 				<p className="mb-8 font-light lg:text-xl">{projectData.description}</p>

@@ -10,22 +10,23 @@ const Terminal: React.FC = () => {
 				<div className=" w-3 h-3 bg-yellow-500 rounded-full mr-[8px]"></div>
 				<div className=" w-3 h-3 bg-green-500 rounded-full mr-[8px]"></div>
 			</div>
-			<div className="terminal-body p-[20px] text-[16px] leading-[1.5] min-h-[220px]">
-				<div className="content text-xs lg:text-sm"></div>
-
-				{commands.map((commandLine, index) => (
-					<span key={index} className="text-green-500 text-xs lg:text-sm">
-						{commandLine}
-						<br />
-					</span>
-				))}
-
-				{output.map((outputLine, index) => (
-					<span key={index} className="text-white text-xs lg:text-sm">
-						{outputLine}
-						<br />
-					</span>
-				))}
+			<div className="terminal-body p-[20px] min-h-[150px] text-[10px]/4 xs:text-xs/5 lg:text-sm/7">
+				<div className="commands text-green-500 mb-1">
+					{commands.map((commandLine, index) => (
+						<span key={index}>
+							{commandLine}
+							<br />
+						</span>
+					))}
+				</div>
+				<div className="output text-white">
+					{output.map((outputLine, index) => (
+						<span key={index}>
+							{outputLine}
+							<br />
+						</span>
+					))}
+				</div>
 			</div>
 		</div>
 	)

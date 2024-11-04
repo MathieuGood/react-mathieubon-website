@@ -10,7 +10,6 @@ const Header: React.FC = () => {
 							src="src/assets/images/avatar.png"
 							className="h-6 mr-3 sm:h-9"
 							alt="Mathieu Bon avatar"
-							style={{ transform: "scaleX(-1)" }}
 						/>
 						<span className="self-center text-xl font-semibold whitespace-nowrap">
 							Mathieu Bon
