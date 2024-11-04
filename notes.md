@@ -2,7 +2,7 @@ To do
 
 [x] Fix avatar image size
 [ ] Fix Terminal whitespace issue
-[ ] Favicon
+[x] Favicon
 [x] Fix project media layout on smaller screens
 [ ] Add more projects
 [ ] Add multilanguage support

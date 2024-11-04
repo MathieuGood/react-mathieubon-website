@@ -1,0 +1,34 @@
+[
+	{
+		"title": "Skills and Tech Stack",
+		"subtitle": "I bring a blend of business acumen and technical expertise to the table.",
+		"description": "With a double degree in Business and Computer Science, I am a back-end developer with a strong focus on conceiving the best solutions for end-users.",
+		"resumeButtonText": "Check out my full resume",
+		"techStack": [
+			{
+				"src": "src/assets/images/tech-python.svg",
+				"alt": "Python Logo",
+				"title": "Python",
+				"description": "FastAPI, Django, Flask, SQLAlchemy, Pandas, Pytest"
+			},
+			{
+				"src": "src/assets/images/tech-react.svg",
+				"alt": "React Logo",
+				"title": "React",
+				"description": "React, React Native, Tailwind CSS, Material UI"
+			},
+			{
+				"src": "src/assets/images/tech-java.svg",
+				"alt": "Java Logo",
+				"title": "Java",
+				"description": "Maven, Spring, Hibernate, JPA, JavaFX, Swing, Vaadin"
+			},
+			{
+				"src": "src/assets/images/tech-docker.svg",
+				"alt": "Docker Logo",
+				"title": "Docker",
+				"description": "Containerization of applications for modular and scalable deployments"
+			}
+		]
+	}
+]

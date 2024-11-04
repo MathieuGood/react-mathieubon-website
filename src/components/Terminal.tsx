@@ -1,4 +1,4 @@
-import terminalContentData from "../data/terminalContent.json"
+import terminalContentData from "../data/terminalData.json"
 
 const Terminal: React.FC = () => {
 	const { commands, output } = terminalContentData[0]
