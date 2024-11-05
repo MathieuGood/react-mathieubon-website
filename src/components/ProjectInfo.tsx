@@ -1,9 +1,9 @@
 import React from "react"
 import BulletPoint from "./BulletPoint"
-import ProjectTechIcon from "./TechIcon"
 import githubLogo from "/src/assets/images/github.svg"
 import buttonsTextData from "../data/buttonsTextData.json"
 import OpenGithubButton from "./OpenGithub"
+import IconWithBubbleOnHover from "./IconWithBubbleOnHover"
 
 interface Project {
 	title: string
@@ -24,8 +24,8 @@ const ProjectInfo: React.FC<{ projectData: Project }> = ({ projectData }) => {
 				<p className="mb-8 font-light lg:text-xl">{projectData.description}</p>
 
 				<div className="tech-stack flex">
-					{projectData.techStack.map((tech, techIndex: number) => (
-						<ProjectTechIcon key={techIndex} src={tech.src} alt={tech.alt} />
+					{projectData.techStack.map(techItem => (
+						<IconWithBubbleOnHover src={techItem.src} alt={techItem.alt} />
 					))}
 				</div>
 

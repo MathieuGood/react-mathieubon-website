@@ -10,7 +10,7 @@
 					{ "src": "src/assets/images/tech-node.svg", "alt": "NodeJS" },
 					{ "src": "src/assets/images/tech-express.svg", "alt": "Express" },
 					{ "src": "src/assets/images/tech-mariadb.svg", "alt": "MariaDB" },
-					{ "src": "src/assets/images/tech-apple.svg", "alt": "iOS Logo" },
+					{ "src": "src/assets/images/tech-apple.svg", "alt": "iOS" },
 					{ "src": "src/assets/images/tech-android.svg", "alt": "Android" }
 				],
 				"features": [
@@ -44,12 +44,13 @@
 				"techStack": [
 					{ "src": "src/assets/images/tech-python.svg", "alt": "Python" },
 					{ "src": "src/assets/images/tech-fastapi.svg", "alt": "FastAPI" },
+					{ "src": "src/assets/images/tech-pydantic.svg", "alt": "Pydantic" },
 					{ "src": "src/assets/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
 					{ "src": "src/assets/images/tech-postgres.svg", "alt": "PostgreSQL" }
 				],
 				"features": [
-					"Validation de données",
 					"CRUD complet",
+					"Validation de données avec Pydantic",
 					"Modèle de données relationnel"
 				],
 				"githubLink": "https://github.com/MathieuGood/concerts_db",

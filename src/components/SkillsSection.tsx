@@ -43,7 +43,10 @@ const SkillsSection: React.FC = () => {
 					</p>
 					<div className="pt-6 mt-6 space-y-4 border-t border-gray-200">
 						<OpenResumeModalButton
-							onClick={openModal}
+							// onClick={openModal}
+							onClick={() => {
+								window.open("https://linkedin.com", "_blank")
+							}}
 							text={buttonTextData[0].resume}
 							imageSrc="/src/assets/images/arrow.svg"
 						/>
