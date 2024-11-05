@@ -1,11 +1,9 @@
 import React from "react"
 
-interface PrimaryColorButtonProps {
-	href: string
-	children: React.ReactNode
-}
-
-const PrimaryColorButton: React.FC<PrimaryColorButtonProps> = ({ href, children }) => {
+const OpenGithubButton: React.FC<{ href: string; children: React.ReactNode }> = ({
+	href,
+	children
+}) => {
 	return (
 		<a
 			href={href}
@@ -16,4 +14,4 @@ const PrimaryColorButton: React.FC<PrimaryColorButtonProps> = ({ href, children 
 	)
 }
 
-export default PrimaryColorButton
+export default OpenGithubButton

@@ -1,16 +1,12 @@
 import React from "react"
 import legalData from "../data/legalData.json"
 
-interface LegalModalProps {
-	onClose: () => void
-}
-
 interface Paragraph {
 	title: string
 	content: string
 }
 
-const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
+const LegalModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 	const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
 		if (e.target === e.currentTarget) {
 			onClose()

@@ -1,10 +1,33 @@
-import React from "react"
-import PrimaryColorButton from "./PrimaryColorButton"
+import React, { useEffect, useState } from "react"
+import OpenResumeModalButton from "./OpenResumeModalButton"
 import TechSkill from "./TechSkill"
 import skillsData from "../data/skillsData.json"
 import buttonTextData from "../data/buttonsTextData.json"
+import ResumeModal from "./ResumeModal"
 
 const SkillsSection: React.FC = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false)
+
+	const openModal = () => {
+		setIsModalOpen(true)
+	}
+
+	const closeModal = () => {
+		setIsModalOpen(false)
+	}
+
+	useEffect(() => {
+		if (isModalOpen) {
+			document.body.style.overflow = "hidden"
+		} else {
+			document.body.style.overflow = "auto"
+		}
+
+		return () => {
+			document.body.style.overflow = "auto"
+		}
+	}, [isModalOpen])
+
 	return (
 		<section className="bg-white">
 			<div className="items-center max-w-screen-xl px-4 py-8 mx-auto md:py-20 lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-16">
@@ -19,16 +42,11 @@ const SkillsSection: React.FC = () => {
 						{skillsData[0].description}
 					</p>
 					<div className="pt-6 mt-6 space-y-4 border-t border-gray-200">
-						<PrimaryColorButton href="https://www.linkedin.com/in/mathieubon/">
-							{buttonTextData[0].resume}
-							<img src="/src/assets/images/arrow.svg" className="w-5 h-5 ml-1" />
-						</PrimaryColorButton>
-						<button
-							className="inline-flex items-center justify-center w-full px-5 py-2 text-m font-medium text-center text-gray-900 border bg-primary-2 border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
-							// onClick={handleOpenPdfModal}
-						>
-							Le CV
-						</button>
+						<OpenResumeModalButton
+							onClick={openModal}
+							text={buttonTextData[0].resume}
+							imageSrc="/src/assets/images/arrow.svg"
+						/>
 					</div>
 				</div>
 				<div className="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
@@ -42,6 +60,7 @@ const SkillsSection: React.FC = () => {
 						/>
 					))}
 				</div>
+				{isModalOpen && <ResumeModal onClose={closeModal} />}
 			</div>
 		</section>
 	)

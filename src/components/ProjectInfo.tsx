@@ -1,9 +1,9 @@
 import React from "react"
 import BulletPoint from "./BulletPoint"
-import PrimaryColorButton from "./PrimaryColorButton"
 import ProjectTechIcon from "./TechIcon"
 import githubLogo from "/src/assets/images/github.svg"
 import buttonsTextData from "../data/buttonsTextData.json"
+import OpenGithubButton from "./OpenGithub"
 
 interface Project {
 	title: string
@@ -14,11 +14,7 @@ interface Project {
 	mediaSrc: string
 }
 
-interface ProjectInfoProps {
-	projectData: Project
-}
-
-const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectData }) => {
+const ProjectInfo: React.FC<{ projectData: Project }> = ({ projectData }) => {
 	return (
 		<div>
 			<div className="text-gray-500 sm:text-lg">
@@ -44,14 +40,14 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectData }) => {
 					))}
 				</ul>
 
-				<PrimaryColorButton href={projectData.githubLink}>
+				<OpenGithubButton href={projectData.githubLink}>
 					<img
 						src={githubLogo}
 						className="w-4 h-4 mr-2 text-gray-500"
 						alt="GitHub Logo"
 					/>
 					{buttonsTextData[0].openGithubProject}
-				</PrimaryColorButton>
+				</OpenGithubButton>
 			</div>
 		</div>
 	)
