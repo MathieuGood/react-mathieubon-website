@@ -14,6 +14,6 @@ FROM nginx:alpine
 
 COPY --from=0 /app/dist /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 9000
 
 CMD ["nginx", "-g", "daemon off;"]
