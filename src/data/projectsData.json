@@ -6,12 +6,12 @@
 				"title": "Jewels Juggle",
 				"description": "Réinterprétation personnelle du jeu Bejeweled avec un thème visuel égyptien. Réalisé avec React Native pour compilation en application native iOS ou Android.",
 				"techStack": [
-					{ "src": "src/assets/images/tech-react.svg", "alt": "React Native" },
-					{ "src": "src/assets/images/tech-node.svg", "alt": "NodeJS" },
-					{ "src": "src/assets/images/tech-express.svg", "alt": "Express" },
-					{ "src": "src/assets/images/tech-mariadb.svg", "alt": "MariaDB" },
-					{ "src": "src/assets/images/tech-apple.svg", "alt": "iOS" },
-					{ "src": "src/assets/images/tech-android.svg", "alt": "Android" }
+					{ "src": "public/images/tech-react.svg", "alt": "React Native" },
+					{ "src": "public/images/tech-node.svg", "alt": "NodeJS" },
+					{ "src": "public/images/tech-express.svg", "alt": "Express" },
+					{ "src": "public/images/tech-mariadb.svg", "alt": "MariaDB" },
+					{ "src": "public/images/tech-apple.svg", "alt": "iOS" },
+					{ "src": "public/images/tech-android.svg", "alt": "Android" }
 				],
 				"features": [
 					"Authentification utilisateur",
@@ -19,16 +19,16 @@
 					"Notifications par e-mail des joueurs au changements de score et classement"
 				],
 				"githubLink": "https://github.com/MathieuGood/bejeweled_clone",
-				"mediaSrc": "src/assets/videos/bejeweled_demo.mp4"
+				"mediaSrc": "public/videos/bejeweled_demo.mp4"
 			},
 			{
 				"title": "Temperature Logger",
 				"description": "Journalise les données de température et d'humidité de capteurs Switchbot. Utilise l'API officielle pour récupérer les informations avant de les enregistrer dans une base de données relationnelle.",
 				"techStack": [
-					{ "src": "src/assets/images/tech-python.svg", "alt": "Python" },
-					{ "src": "src/assets/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
-					{ "src": "src/assets/images/tech-postgres.svg", "alt": "PostgreSQL" },
-					{ "src": "src/assets/images/tech-docker.svg", "alt": "Docker" }
+					{ "src": "public/images/tech-python.svg", "alt": "Python" },
+					{ "src": "public/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
+					{ "src": "public/images/tech-postgres.svg", "alt": "PostgreSQL" },
+					{ "src": "public/images/tech-docker.svg", "alt": "Docker" }
 				],
 				"features": [
 					"Utilisation d'un ORM pour lecture et écriture en base de données",
@@ -36,17 +36,17 @@
 					"Application conteneurisée pour un déploiement facile"
 				],
 				"githubLink": "https://github.com/MathieuGood/temperature_logger",
-				"mediaSrc": "src/assets/videos/temperature_logger_demo.mp4"
+				"mediaSrc": "public/videos/temperature_logger_demo.mp4"
 			},
 			{
 				"title": "Concerts I've Been To",
 				"description": "API permettant d'enregistrer dans une base de données relationnelle les concerts auxquels on a assisté avec des informations sur l'artiste, la date, le lieu, les médias et commentaires.",
 				"techStack": [
-					{ "src": "src/assets/images/tech-python.svg", "alt": "Python" },
-					{ "src": "src/assets/images/tech-fastapi.svg", "alt": "FastAPI" },
-					{ "src": "src/assets/images/tech-pydantic.svg", "alt": "Pydantic" },
-					{ "src": "src/assets/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
-					{ "src": "src/assets/images/tech-postgres.svg", "alt": "PostgreSQL" }
+					{ "src": "public/images/tech-python.svg", "alt": "Python" },
+					{ "src": "public/images/tech-fastapi.svg", "alt": "FastAPI" },
+					{ "src": "public/images/tech-pydantic.svg", "alt": "Pydantic" },
+					{ "src": "public/images/tech-sqlalchemy.svg", "alt": "SQLAlchemy" },
+					{ "src": "public/images/tech-postgres.svg", "alt": "PostgreSQL" }
 				],
 				"features": [
 					"CRUD complet",
@@ -54,7 +54,7 @@
 					"Modèle de données relationnel"
 				],
 				"githubLink": "https://github.com/MathieuGood/concerts_db",
-				"mediaSrc": "src/assets/videos/temperature_logger_demo.mp4"
+				"mediaSrc": "public/videos/temperature_logger_demo.mp4"
 			}
 		]
 	}

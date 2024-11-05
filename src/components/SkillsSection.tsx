@@ -8,9 +8,9 @@ import ResumeModal from "./ResumeModal"
 const SkillsSection: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
-	const openModal = () => {
-		setIsModalOpen(true)
-	}
+	// const openModal = () => {
+	// 	setIsModalOpen(true)
+	// }
 
 	const closeModal = () => {
 		setIsModalOpen(false)
@@ -45,10 +45,10 @@ const SkillsSection: React.FC = () => {
 						<OpenResumeModalButton
 							// onClick={openModal}
 							onClick={() => {
-								window.open("https://linkedin.com", "_blank")
+								window.open("https://linkedin.com/in/MathieuBon", "_blank")
 							}}
 							text={buttonTextData[0].resume}
-							imageSrc="/src/assets/images/arrow.svg"
+							imageSrc="public/images/arrow.svg"
 						/>
 					</div>
 				</div>

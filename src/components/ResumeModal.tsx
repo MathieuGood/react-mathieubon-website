@@ -13,7 +13,7 @@ const ResumeModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 			className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
 			onClick={handleBackgroundClick}>
 			<div className="bg-green-700 relative w-full h-auto max-w-3xl max-h-full">
-				<PdfViewer pdfUrl="src/assets/pdf/cv_mathieu_bon.pdf" />
+				<PdfViewer pdfUrl="public/pdf/cv_mathieu_bon.pdf" />
 			</div>
 		</div>
 	)

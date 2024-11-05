@@ -1,6 +1,5 @@
 import React from "react"
 import BulletPoint from "./BulletPoint"
-import githubLogo from "/src/assets/images/github.svg"
 import buttonsTextData from "../data/buttonsTextData.json"
 import OpenGithubButton from "./OpenGithub"
 import IconWithBubbleOnHover from "./IconWithBubbleOnHover"
@@ -42,7 +41,7 @@ const ProjectInfo: React.FC<{ projectData: Project }> = ({ projectData }) => {
 
 				<OpenGithubButton href={projectData.githubLink}>
 					<img
-						src={githubLogo}
+						src="public/images/github.svg"
 						className="w-4 h-4 mr-2 text-gray-500"
 						alt="GitHub Logo"
 					/>

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
 			<div className="grid max-w-screen-xl px-4 pt-8 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-10">
 				<div className="hero-avatar1 hidden lg:mt-0 lg:col-span-5 lg:flex">
 					<img
-						src="src/assets/images/avatar.png"
+						src="public/images/avatar.png"
 						alt="Developer working on laptop"
 						className="lg:w-auto lg:h-auto object-contain"
 					/>
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 					<div className="flex flex-col xs:flex-row">
 						<div className="hero-avatar2 -mt-3 mb-2 xs:mb-0 lg:hidden w-25 mr-8">
 							<img
-								src="src/assets/images/avatar.png"
+								src="public/images/avatar.png"
 								alt="Developer working on laptop"
 								className="max-w-[150px] md:max-w-[230px]"
 							/>
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
 							href={pageData[0].githubLink}
 							divClassName="py-3 text-xl"
 							imageSize="6"
-							imageSrc="src/assets/images/github.svg"
+							imageSrc="public/images/github.svg"
 							imageAlt="GitHub logo"
 							text="GitHub"
 							textClassName="ml-2"
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
 							href={pageData[0].linkedinLink}
 							divClassName="py-3 text-xl"
 							imageSize="6"
-							imageSrc="src/assets/images/linkedin.svg"
+							imageSrc="public/images/linkedin.svg"
 							imageAlt="LinkedIn logo"
 							text="LinkedIn"
 							textClassName="ml-2"

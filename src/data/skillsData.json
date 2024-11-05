@@ -5,25 +5,25 @@
 		"description": "Doublement diplômé en Management et Informatique, je suis un développeur back-end ayant à coeur de concevoir les meilleures solutions pour les utilisateurs finaux.",
 		"techStack": [
 			{
-				"src": "src/assets/images/tech-python.svg",
+				"src": "public/images/tech-python.svg",
 				"alt": "Python Logo",
 				"title": "Python",
 				"description": "FastAPI, Django, Flask, SQLAlchemy, Pandas, Pytest"
 			},
 			{
-				"src": "src/assets/images/tech-react.svg",
+				"src": "public/images/tech-react.svg",
 				"alt": "React Logo",
 				"title": "React",
 				"description": "React, React Native, Tailwind CSS, Material UI"
 			},
 			{
-				"src": "src/assets/images/tech-java.svg",
+				"src": "public/images/tech-java.svg",
 				"alt": "Java Logo",
 				"title": "Java",
 				"description": "Maven, Spring, Hibernate, JPA, JavaFX, Swing, Vaadin"
 			},
 			{
-				"src": "src/assets/images/tech-docker.svg",
+				"src": "public/images/tech-docker.svg",
 				"alt": "Docker Logo",
 				"title": "Docker",
 				"description": "Docker CLI+Desktop, Dockerfile, Docker Compose"
