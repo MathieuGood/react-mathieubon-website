@@ -48,7 +48,7 @@ const SkillsSection: React.FC = () => {
 								window.open("https://linkedin.com/in/MathieuBon", "_blank")
 							}}
 							text={buttonTextData[0].resume}
-							imageSrc="public/images/arrow.svg"
+							imageSrc="/images/arrow.svg"
 						/>
 					</div>
 				</div>

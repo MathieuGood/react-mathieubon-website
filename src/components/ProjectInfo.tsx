@@ -41,7 +41,7 @@ const ProjectInfo: React.FC<{ projectData: Project }> = ({ projectData }) => {
 
 				<OpenGithubButton href={projectData.githubLink}>
 					<img
-						src="public/images/github.svg"
+						src="/images/github.svg"
 						className="w-4 h-4 mr-2 text-gray-500"
 						alt="GitHub Logo"
 					/>

@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 				<div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
 					<div className="flex items-center">
 						<img
-							src="public/images/avatar.png"
+							src="/images/avatar.png"
 							className="h-10 mr-3"
 							alt="Mathieu Bon avatar"
 						/>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 							href={pageData[0].githubLink}
 							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
-							imageSrc="public/images/github.svg"
+							imageSrc="/images/github.svg"
 							imageAlt="GitHub logo"
 							text="GitHub"
 							textClassName="hidden xm:block xm:ml-2"
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 							href={pageData[0].linkedinLink}
 							divClassName="px-2 py-2 xs:py-2 xs:px-5 mr-2 text-sm"
 							imageSize="4"
-							imageSrc="public/images/linkedin.svg"
+							imageSrc="/images/linkedin.svg"
 							imageAlt="LinkedIn logo"
 							text="LinkedIn"
 							textClassName="hidden xm:block xm:ml-2"

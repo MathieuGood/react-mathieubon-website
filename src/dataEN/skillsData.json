@@ -5,25 +5,25 @@
 		"description": "With a double degree in Business and Computer Science, I am a back-end developer with a strong focus on conceiving the best solutions for end-users.",
 		"techStack": [
 			{
-				"src": "public/images/tech-python.svg",
+				"src": "/images/tech-python.svg",
 				"alt": "Python Logo",
 				"title": "Python",
 				"description": "FastAPI, Django, Flask, SQLAlchemy, Pandas, Pytest"
 			},
 			{
-				"src": "public/images/tech-react.svg",
+				"src": "/images/tech-react.svg",
 				"alt": "React Logo",
 				"title": "React",
 				"description": "React, React Native, Tailwind CSS, Material UI"
 			},
 			{
-				"src": "public/images/tech-java.svg",
+				"src": "/images/tech-java.svg",
 				"alt": "Java Logo",
 				"title": "Java",
 				"description": "Maven, Spring, Hibernate, JPA, JavaFX, Swing, Vaadin"
 			},
 			{
-				"src": "public/images/tech-docker.svg",
+				"src": "/images/tech-docker.svg",
 				"alt": "Docker Logo",
 				"title": "Docker",
 				"description": "Docker CLI+Desktop, Dockerfile, Docker Compose"
