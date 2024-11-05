@@ -8,6 +8,17 @@ To do
 [ ] Add multilanguage support
 
 Convert video with width of 544px and keep aspect ratio
+
 ```bash
 ffmpeg -i input_video.mp4 -vf "scale=544:-2" -r 15 -c:v libx264 -crf 23 -preset slow -c:a aac output_video.mp4
+```
+
+```bash
+ docker build --platform linux/amd64 -t mathieubon-site .
+ docker save -o mathieubon-site.tar mathieubon-site
+```
+
+```bash
+docker load -i mathieubon-site.tar
+
 ```
