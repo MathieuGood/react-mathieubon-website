@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 							<h1 className="hero-title max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
 								{pageData[0].heroTitle}
 							</h1>
-							<p className="hero-subtitle max-w-2xl mb-6 text-md font-light lg:mb-8 md:text-lg lg:text-xl">
+							<p className="hero-subtitle max-w-2xl mb-6 text-md font-light lg:mb-8 md:text-2xl">
 								{pageData[0].heroSubtitle}
 							</p>
 						</div>
