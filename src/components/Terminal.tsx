@@ -10,7 +10,7 @@ const Terminal: React.FC = () => {
 				<div className=" w-3 h-3 bg-yellow-500 rounded-full mr-[8px]"></div>
 				<div className=" w-3 h-3 bg-green-500 rounded-full mr-[8px]"></div>
 			</div>
-			<div className="terminal-body p-[20px] min-h-[150px] text-[10px]/4 xs:text-xs/5 lg:text-sm/7">
+			<div className="terminal-body pt-3 pb-4 px-5 min-h-[150px] text-[10px]/4 xs:text-xs/5 lg:text-sm/7">
 				<div className="commands text-green-500 mb-1">
 					{commands.map((commandLine, index) => (
 						<span key={index}>
