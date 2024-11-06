@@ -3,9 +3,9 @@
 		"commands": ["$ python3", ">>> from mathieubon import skills", ">>> print(skills)"],
 		"output": [
 			"{ 'Web': ['FastAPI', 'Flask', 'Django'],",
-			"  'ORM + Validation': ['SQLAlchemy', 'Pydantic'],",
-			"  'Tests': 'Pytest',",
-			"  'Data': ['Pandas', 'Numpy','Matplotlib'] }"
+			"&nbsp;&nbsp;'ORM + Validation': ['SQLAlchemy', 'Pydantic'],",
+			"&nbsp;&nbsp;'Tests': 'Pytest',",
+			"&nbsp;&nbsp;'Data': ['Pandas', 'Numpy','Matplotlib'] }"
 		]
 	}
 ]
