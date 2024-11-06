@@ -7,6 +7,10 @@
 				"content": "Site personnel de Mathieu Bon. Pour toute question ou demande concernant le contenu de ce site, veuillez me contacter directement à l'adresse contact@mathieubon.com"
 			},
 			{
+				"title": "Collecte de données",
+				"content": "Ce site ne collecte directement aucune donnée personnelle ni cookie."
+			},
+			{
 				"title": "Hébergement",
 				"content": "Hébergé par OVH SAS, 2 rue Kellermann, 59100 Roubaix - France"
 			}
