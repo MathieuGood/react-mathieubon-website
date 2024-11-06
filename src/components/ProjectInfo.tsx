@@ -23,8 +23,8 @@ const ProjectInfo: React.FC<{ projectData: Project }> = ({ projectData }) => {
 				<p className="mb-8 font-light lg:text-xl">{projectData.description}</p>
 
 				<div className="tech-stack flex">
-					{projectData.techStack.map(techItem => (
-						<IconWithBubbleOnHover src={techItem.src} alt={techItem.alt} />
+					{projectData.techStack.map((techItem, index) => (
+						<IconWithBubbleOnHover key={index} src={techItem.src} alt={techItem.alt} />
 					))}
 				</div>
 
