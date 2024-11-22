@@ -1,10 +1,6 @@
 import React from "react"
 
-interface ProjectMediaProps {
-	mediaSrc: string
-}
-
-const ProjectMedia: React.FC<ProjectMediaProps> = ({ mediaSrc: path }) => {
+const ProjectMedia: React.FC<{ mediaSrc: string }> = ({ mediaSrc: path }) => {
 	return (
 		<div className="flex justify-center items-center mt-8 lg:mt-0 lg:order-2">
 			{path.endsWith("mp4") ? (
