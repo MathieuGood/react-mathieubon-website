@@ -54,6 +54,7 @@ ssh $REMOTE_USER@$REMOTE_HOST <<EOF
   export REMOTE_DIR=$REMOTE_DIR
   export DOCKER_IMAGE=$DOCKER_IMAGE
   export REMOTE_CONTAINER_NAME=$REMOTE_CONTAINER_NAME
+  export PORT=$PORT
   
   log() {
     echo -e "${GREEN}\$(date +"%Y-%m-%d %H:%M:%S") [INFO]${NC} \$1"
@@ -76,18 +77,18 @@ ssh $REMOTE_USER@$REMOTE_HOST <<EOF
   log "Removing the existing Docker image..."
   docker rmi -f \$DOCKER_IMAGE || true
 
-  log "Checking if port 9000 is in use by any container..."
-  CONTAINER_ID=\$(docker ps -q -f "publish=9000")
+  log "Checking if port \$PORT is in use by any container..."
+  CONTAINER_ID=\$(docker ps -q -f "publish=\$PORT")
   if [ -n "\$CONTAINER_ID" ]; then
-    warn "Stopping the container using port 9000..."
-    docker kill \$CONTAINER_ID || { error "Failed to kill the container using port 9000"; }
-    docker rm \$CONTAINER_ID || { error "Failed to remove the container using port 9000";  }
+    warn "Stopping the container using port \$PORT..."
+    docker kill \$CONTAINER_ID || { error "Failed to kill the container using port \$PORT"; }
+    docker rm \$CONTAINER_ID || { error "Failed to remove the container using port \$PORT";  }
   fi
 
-  log "Checking if port 9000 is still in use by a non-Docker process..."
-  if lsof -i :9000; then
-    warn "Port 9000 is still in use by another process. Stopping the process..."
-    kill -9 \$(lsof -t -i :9000)
+  log "Checking if port \$PORT is still in use by a non-Docker process..."
+  if lsof -i :\$PORT; then
+    warn "Port \$PORT is still in use by another process. Stopping the process..."
+    kill -9 \$(lsof -t -i :\$PORT)
   fi
 
   log "Killing the existing container..."
@@ -103,7 +104,7 @@ ssh $REMOTE_USER@$REMOTE_HOST <<EOF
   docker load -i \$REMOTE_DIR/\$TAR_FILE || { error "Failed to load Docker image"; }
 
   log "Running the Docker container..."
-  docker run -d --name \$REMOTE_CONTAINER_NAME -p 9000:80 \$DOCKER_IMAGE
+  docker run -d --name \$REMOTE_CONTAINER_NAME -p \$PORT:80 \$DOCKER_IMAGE
 
   docker ps
 
