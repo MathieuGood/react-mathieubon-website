@@ -7,6 +7,9 @@ To do
 [ ] Add more projects
 [ ] Add multilanguage support
 
+## Pagespeed insights
+https://pagespeed.web.dev/analysis/https-mathieubon-com/lrq49h9bvh?form_factor=mobile
+
 ## Video conversion
 
 Convert video with width of 544px and keep aspect ratio
