@@ -19,8 +19,12 @@ error() {
   printf "${RED}$(date +"%Y-%m-%d %H:%M:%S") [ERROR]${NC} %s\n" "$1"
 }
 
-log "Building the project..."
+
 cd ..
+
+find public -type f -exec chmod 644 {} \;
+
+log "Building the project..."
 npm run build || {
   error "Build failed"
   exit 1
