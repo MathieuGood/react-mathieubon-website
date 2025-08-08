@@ -1,33 +1,9 @@
-import React, { useEffect, useState } from "react"
-import OpenResumeModalButton from "./OpenResumeModalButton"
+import OpenResumeButton from "./OpenResumeButton"
 import TechSkill from "./TechSkill"
 import skillsData from "../data/skillsData.json"
 import buttonTextData from "../data/buttonsTextData.json"
-import ResumeModal from "./ResumeModal"
 
 const SkillsSection: React.FC = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false)
-
-	// const openModal = () => {
-	// 	setIsModalOpen(true)
-	// }
-
-	const closeModal = () => {
-		setIsModalOpen(false)
-	}
-
-	useEffect(() => {
-		if (isModalOpen) {
-			document.body.style.overflow = "hidden"
-		} else {
-			document.body.style.overflow = "auto"
-		}
-
-		return () => {
-			document.body.style.overflow = "auto"
-		}
-	}, [isModalOpen])
-
 	return (
 		<section className="bg-white">
 			<div className="items-center max-w-screen-xl px-4 py-8 mx-auto md:py-20 lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-16">
@@ -42,8 +18,7 @@ const SkillsSection: React.FC = () => {
 						{skillsData[0].description}
 					</p>
 					<div className="pt-6 mt-6 space-y-4 border-t border-gray-200">
-						<OpenResumeModalButton
-							// onClick={openModal}
+						<OpenResumeButton
 							onClick={() => {
 								window.open("https://linkedin.com/in/MathieuBon", "_blank")
 							}}
@@ -63,7 +38,6 @@ const SkillsSection: React.FC = () => {
 						/>
 					))}
 				</div>
-				{isModalOpen && <ResumeModal onClose={closeModal} />}
 			</div>
 		</section>
 	)

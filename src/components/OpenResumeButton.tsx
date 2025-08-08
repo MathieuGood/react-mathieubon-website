@@ -1,6 +1,6 @@
 import React from "react"
 
-const OpenResumeModalButton: React.FC<{
+const OpenResumeButton: React.FC<{
 	onClick: React.MouseEventHandler<HTMLButtonElement>
 	text: string
 	imageSrc?: string
@@ -16,4 +16,4 @@ const OpenResumeModalButton: React.FC<{
 	)
 }
 
-export default OpenResumeModalButton
+export default OpenResumeButton
