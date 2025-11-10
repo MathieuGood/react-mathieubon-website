@@ -23,6 +23,14 @@ jobs:
 
       - name: Build React app
         run: npm run build
+        
+      - name: Check build output
+        run: |
+          echo "Build directory contents:"
+          ls -la
+          echo "Build folder contents:"
+          ls -la build || ls -la dist || echo "No build/dist directory found"
+
 
       - name: Deploy via SSH (rsync incremental)
         uses: easingthemes/ssh-deploy@v5.1.0
@@ -31,5 +39,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.VPS_HOST }}
           REMOTE_USER: ${{ secrets.VPS_USER }}
           TARGET: ${{ secrets.VPS_PATH }}
-          SOURCE: build/
+          SOURCE: dist/
           ARGS: "-avz --delete"
