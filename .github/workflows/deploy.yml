@@ -1,26 +1,35 @@
-name: Deploy to VPS
+name: 🚀 Deploy React app to VPS
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main  # or whichever branch you deploy from
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repo
-              uses: actions/checkout@v4.2.2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Deploy via SSH
-              uses: appleboy/ssh-action@v1.2.2
-              with:
-                  host: ${{ secrets.VPS_HOST }}
-                  username: ${{ secrets.VPS_USER }}
-                  key: ${{ secrets.VPS_SSH_KEY }}
-                  script: |
-                      cd ~/docker-apps/mathieubon-website
-                      git pull origin main
-                      docker compose down
-                      docker compose up -d --build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Deploy via SSH (rsync incremental)
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.VPS_HOST }}
+          REMOTE_USER: ${{ secrets.VPS_USER }}
+          TARGET: ${{ secrets.VPS_PATH }}
+          SOURCE: build/
+          ARGS: "-avz --delete"
