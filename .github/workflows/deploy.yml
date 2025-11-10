@@ -23,13 +23,16 @@ jobs:
 
       - name: Build React app
         run: npm run build
-        
+
       - name: Check build output
         run: |
           echo "Build directory contents:"
           ls -la
           echo "Build folder contents:"
           ls -la build || ls -la dist || echo "No build/dist directory found"
+
+      - name: Check context
+        run: echo "$GITHUB_CONTEXT"
 
 
       - name: Deploy via SSH (rsync incremental)
