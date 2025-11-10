@@ -1,46 +1,57 @@
 name: 🚀 Deploy React app to VPS
 
 on:
-  push:
-    branches:
-      - main  # or whichever branch you deploy from
+    push:
+        branches:
+            - main # or whichever branch you deploy from
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+    build-and-deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
 
-      - name: Install dependencies
-        run: npm ci
+            - name: Install dependencies
+              run: npm ci
 
-      - name: Build React app
-        run: npm run build
+            - name: Build React app
+              run: npm run build
 
-      - name: Check build output
-        run: |
-          echo "Build directory contents:"
-          ls -la
-          echo "Build folder contents:"
-          ls -la build || ls -la dist || echo "No build/dist directory found"
+            - name: Check build output
+              run: |
+                  echo "Build directory contents:"
+                  ls -la
+                  echo "Build folder contents:"
+                  ls -la build || ls -la dist || echo "No build/dist directory found"
 
-      - name: Check context
-        run: echo "$GITHUB_CONTEXT"
+            - name: Check context
+              run: echo "$GITHUB_CONTEXT"
 
+            - name: Debug Secrets (partially shown)
+              run: |
+                  echo "VPS_SSH_KEY: ${VPS_SSH_KEY:0:50}********"
+                  echo "VPS_HOST: ${VPS_HOST:0:50}********"
+                  echo "VPS_USER: ${VPS_USER:0:50}********"
+                  echo "VPS_PATH: ${VPS_PATH:0:50}********"
+              env:
+                  VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+                  VPS_HOST: ${{ secrets.VPS_HOST }}
+                  VPS_USER: ${{ secrets.VPS_USER }}
+                  VPS_PATH: ${{ secrets.VPS_PATH }}
 
-      - name: Deploy via SSH (rsync incremental)
-        uses: easingthemes/ssh-deploy@v5.1.0
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.VPS_HOST }}
-          REMOTE_USER: ${{ secrets.VPS_USER }}
-          TARGET: ${{ secrets.VPS_PATH }}
-          SOURCE: dist/
-          ARGS: "-avz --delete"
+            - name: Deploy via SSH (rsync incremental)
+              uses: easingthemes/ssh-deploy@v5.1.0
+              with:
+                  SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
+                  REMOTE_HOST: ${{ secrets.VPS_HOST }}
+                  REMOTE_USER: ${{ secrets.VPS_USER }}
+                  TARGET: ${{ secrets.VPS_PATH }}
+                  SOURCE: dist/
+                  ARGS: "-avz --delete"
