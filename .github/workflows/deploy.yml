@@ -3,7 +3,7 @@ name: 🚀 Deploy React app to VPS
 on:
     push:
         branches:
-            - main # or whichever branch you deploy from
+            - main
 
 jobs:
     build-and-deploy:
@@ -23,28 +23,13 @@ jobs:
 
             - name: Build React app
               run: npm run build
-
-            - name: Check build output
+            
+            - name: Debug SSH key format
               run: |
-                  echo "Build directory contents:"
-                  ls -la
-                  echo "Build folder contents:"
-                  ls -la build || ls -la dist || echo "No build/dist directory found"
+                echo "${{ secrets.VPS_SSH_KEY }}" | head -n 5
+                echo "-----"
+                echo "${{ secrets.VPS_SSH_KEY }}" | tail -n 5
 
-            - name: Check context
-              run: echo "$GITHUB_CONTEXT"
-
-            - name: Debug Secrets (partially shown)
-              run: |
-                  echo "VPS_SSH_KEY: ${VPS_SSH_KEY:0:50}"
-                  echo "VPS_HOST: ${VPS_HOST:0:50}"
-                  echo "VPS_USER: ${VPS_USER:0:50}"
-                  echo "VPS_PATH: ${VPS_PATH:0:50}"
-              env:
-                  VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
-                  VPS_HOST: ${{ secrets.VPS_HOST }}
-                  VPS_USER: ${{ secrets.VPS_USER }}
-                  VPS_PATH: ${{ secrets.VPS_PATH }}
 
             - name: Deploy via SSH (rsync incremental)
               uses: easingthemes/ssh-deploy@v5.1.0
